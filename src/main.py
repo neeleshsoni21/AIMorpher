@@ -12,7 +12,7 @@ You should have received a copy of the GNU Lesser General Public License along w
 from addoptions import addoptions
 from pdb_class import PDB
 from alignment import align_structures
-from transformation import morph_structure
+from transformation import morph_structure, morph_structure2
 
 #Parsing the inputs from the command line#
 arguments=addoptions()
@@ -38,5 +38,10 @@ seq_I_itermap, seq_F_itermap = align_structures(mdlI,mdlF,outfilename)
 num_intm = arguments[3]
 
 print("\nMorphing the Aligned Residues")
+
 #apply recursive transformations
-morph_structure(mdlI,seq_I_itermap,mdlF,seq_F_itermap,num_intm,outfilename)
+#Temperorly deactivating similar sequence/structure morphing. 
+#Morphing on non-identical sequences giving non-real morphed structures due to unusal bond lengths
+#morph_structure(mdlI,seq_I_itermap,mdlF,seq_F_itermap,num_intm,outfilename)
+
+morph_structure2(mdlI,seq_I_itermap,mdlF,seq_F_itermap,num_intm,outfilename)
