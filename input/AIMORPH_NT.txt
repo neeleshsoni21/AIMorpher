@@ -1,0 +1,10 @@
+#  Matrix made by manual addition of scores to give exact alignment
+#  * column uses minimum score
+#  
+   A  T  G  C  U  *
+A  1 -1 -1 -1 -1 -1
+T -1  1 -1 -1 -1 -1
+G -1 -1  1 -1 -1 -1
+C -1 -1 -1  1 -1 -1
+U -1 -1 -1 -1  1 -1
+* -1 -1 -1 -1 -1  1
